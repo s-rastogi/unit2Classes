@@ -1,8 +1,8 @@
 import java.awt.Graphics2D;
-2 import java.awt.Rectangle;
-3 import java.awt.geom.Ellipse2D;
-4 import java.awt.geom.Line2D;
-5 import java.awt.geom.Point2D;
+import java.awt.Rectangle;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 
 
 /**
@@ -11,18 +11,19 @@ import java.awt.Graphics2D;
  * @author Saahil Rastogi
  * @version 10/1/15
  */
-public class Building
+public class Building 
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-
+    private int xLeft;
+    private int yTop;
     /**
      * Default constructor for objects of class Building
      */
-    public Building()
+    public Building(int x, int y)
     {
         // initialise instance variables
-        x = 0;
+        xLeft = x;
+        yTop= y;
     }
 
     /**
@@ -36,10 +37,23 @@ public class Building
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public int sampleMethod(int y)
+    public void draw(Graphics2D g2)
     {
         // put your code here
-        return x+y;
+        Rectangle body1= new Rectangle(xLeft-250,yTop,500,1000);
+        Rectangle body2= new Rectangle(xLeft,yTop+250,200,1000);
+        Rectangle body3= new Rectangle(xLeft+550,yTop+20,100,1000);
+        Rectangle body4= new Rectangle(xLeft-400,yTop,700,100);
+        Rectangle body5= new Rectangle(xLeft+400,yTop+40,90,1000);
+        g2.draw(body1);
+        g2.draw(body2);
+        g2.draw(body3);
+        g2.draw(body4);
+        g2.draw(body5);
     }
 
 }
+
+
+
+

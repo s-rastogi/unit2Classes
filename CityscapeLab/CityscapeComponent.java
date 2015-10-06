@@ -14,6 +14,10 @@ public class CityscapeComponent extends JComponent
     // define the objects in your Cityscape as instance variables
     // ...
     
+ 
+
+   
+
     
     
     // define the CityscapeComponent contructor and intiailize all instance variables
@@ -32,6 +36,11 @@ public class CityscapeComponent extends JComponent
         // invoke the draw method on each object in your Cityscape
         // ...
         
+        int x = getWidth()/2;
+        int y = getHeight()/2;
+        Building building1 = new Building(x,y);
+
+        building1.draw(g2);
         
     }
     
