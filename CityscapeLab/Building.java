@@ -40,16 +40,18 @@ public class Building
     public void draw(Graphics2D g2)
     {
         // put your code here
-        Rectangle body1= new Rectangle(xLeft-250,yTop,500,1000);
-        Rectangle body2= new Rectangle(xLeft,yTop+250,200,1000);
-        Rectangle body3= new Rectangle(xLeft+550,yTop+20,100,1000);
-        Rectangle body4= new Rectangle(xLeft-400,yTop,700,100);
-        Rectangle body5= new Rectangle(xLeft+400,yTop+40,90,1000);
+        Rectangle body1= new Rectangle(xLeft-500,yTop+100,100,1000);
+        Rectangle body2= new Rectangle(xLeft-250,yTop-200,100,1000);
+        Rectangle body3= new Rectangle(xLeft,yTop-450,100,1000);
+        Rectangle body4= new Rectangle(xLeft+250,yTop+50,100,1000);
+        Rectangle body5= new Rectangle(xLeft+500,yTop-400,100,1000);
+        Rectangle body6= new Rectangle(xLeft-700,yTop-50,100,1000);
         g2.draw(body1);
         g2.draw(body2);
         g2.draw(body3);
         g2.draw(body4);
         g2.draw(body5);
+        g2.draw(body6);
     }
 
 }
