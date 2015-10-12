@@ -3,59 +3,57 @@ import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
+import java.awt.Color;
+import java.util.Random;
 
 
 /**
- * Write a description of class Building here.
- * 
- * @author Saahil Rastogi
- * @version 10/1/15
+ * Class that has the building constructor and draw method 
+ * @author srastogi
+ * @version 9 October 2015
  */
-public class Building 
+public class Building
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** xLeft and yTop - top left point coordinates of the building
+    * rectHeight and rectWidth- height and width of rectangle...
+    */
     private int xLeft;
     private int yTop;
+    private int rectHeight;
+    private int rectWidth;
+
     /**
-     * Default constructor for objects of class Building
+     * a constructors who constructs a building 
      */
-    public Building(int x, int y)
+    public Building(int x, int y, int w, int h)
     {
-        // initialise instance variables
         xLeft = x;
-        yTop= y;
+        yTop = y;
+        rectHeight = h;
+        rectWidth = w;
+        
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * The paintComponent method takes g2 of the Graphics class as a parameter and creates instances of the shape classes.
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * 
+     * @post   once draw method is used it will create and draw components
+     *            
+     * @param    g2   all i know is that is allows it draw components
+     * @return    return type - void
      */
     public void draw(Graphics2D g2)
     {
-        // put your code here
-        Rectangle body1= new Rectangle(xLeft-500,yTop+100,100,1000);
-        Rectangle body2= new Rectangle(xLeft-250,yTop-200,100,1000);
-        Rectangle body3= new Rectangle(xLeft,yTop-450,100,1000);
-        Rectangle body4= new Rectangle(xLeft+250,yTop+50,100,1000);
-        Rectangle body5= new Rectangle(xLeft+500,yTop-400,100,1000);
-        Rectangle body6= new Rectangle(xLeft-700,yTop-50,100,1000);
-        g2.draw(body1);
-        g2.draw(body2);
-        g2.draw(body3);
-        g2.draw(body4);
-        g2.draw(body5);
-        g2.draw(body6);
-    }
+        
+        Rectangle building = new Rectangle(xLeft, yTop, rectWidth, rectHeight);
+        g2.setColor(Color.DARK_GRAY);
+        g2.fill(building);
+        g2.draw(building);
+        
+        
+        
+   
 
+} 
 }
-
-
-
-
